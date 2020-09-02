@@ -15,6 +15,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.widget.Toolbar;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         view = inflater.inflate(R.layout.login_popup, null);
 
         final EditText username = view.findViewById(R.id.et_username);
+        final EditText email = view.findViewById(R.id.et_email);
         final EditText password = view.findViewById(R.id.et_password);
         Button btn_login = view.findViewById(R.id.loginDialogButton);
         Button btn_cancel = view.findViewById(R.id.cancelDialogButton);
@@ -47,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String user = username.getText().toString();
+                String mail = email.getText().toString();
                 String pass = password.getText().toString();
                 if(user.equals("admin") && pass.equals("admin")) {
                     startActivity(new Intent(MainActivity.this, BaseDeDatos.class));

@@ -37,4 +37,6 @@
     <string name="precio">Precio</string>
     <string name="btn_buscar">Buscar</string>
     <string name="txt_precioItem">Precio</string>
+    <string name="email">Email</string>
+    <string name="enter_email">Enter your email...</string>
 </resources>
